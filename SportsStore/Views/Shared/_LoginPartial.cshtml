@@ -1,0 +1,31 @@
+﻿
+@using Microsoft.AspNetCore.Identity
+@using ASPNetCoreIdentity.Models
+@using SportsStore.Models
+@using SportsStore.Controllers
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@* (SignInManager.IsSignedIn(User)) System.Web.HttpContext.Current.Session["username"] *@
+@if (AccountController.uname != null)
+{
+    <form asp-area="" asp-controller="Account" asp-action="Logout" method="get" id="logoutForm" class="navbar-right">
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a asp-area="" asp-controller="Account" asp-action="Logout" title="Manage">Hello @AccountController.uname!</a>
+            </li>
+            <li>
+                <button type="submit" class="btn btn-link navbar-btn navbar-link">Log out</button>
+            </li>
+        </ul>
+    </form>
+}
+else
+{
+    <p>not logged in</p>
+    <ul class="nav navbar-nav navbar-right">
+
+        <li><a asp-area="" asp-controller="Account" asp-action="Register">Registerr</a></li>
+        <li><a asp-area="" asp-controller="Account" asp-action="Login">Log in</a></li>
+    </ul>
+}

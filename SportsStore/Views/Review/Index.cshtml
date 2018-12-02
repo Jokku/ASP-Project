@@ -1,0 +1,32 @@
+﻿@model SportsStore.Models.ViewModels.ReviewIndexModel
+
+<div id="reviews">
+    <h3>Reviews</h3>
+    <div id="reviewTable">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Rating</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var review in Model.Reviews)
+                {
+                <tr>
+                    <td>
+                        @review.Id
+                    </td>
+                    <td>
+                        @review.rating
+                    </td>
+                    <td>
+                        @review.comment
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

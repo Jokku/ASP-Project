@@ -1,0 +1,90 @@
+﻿@model SportsStore.Models.ViewModels.ProductReviewViewModel
+
+<div id="pdetails">
+    <h3>Product Details</h3>
+    <div id="reviewTable">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+                <tr>
+                    <td>
+                        @Model.Product.ProductID
+                    </td>
+                    <td>
+                        @Model.Product.Name
+                    </td>
+                    <td>
+                        @Model.Product.Category
+                    </td>
+                    <td>
+                        @Model.Product.Description
+                    </td>
+                    <td>
+                        @Model.Product.Price
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="pReviews">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Rating</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var review in Model.Reviews)
+                {
+                    <tr>
+                        <td>
+                            @review.user
+                        </td>
+                        <td>
+                            @review.rating
+                        </td>
+                        <td>
+                            @review.comment
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <h5>Write your Review</h5>
+    <form asp-controller="Product" asp-action="AddReview" method="post">
+        <h4>Add your Review</h4>
+        <hr />
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group">
+            <label>Rating</label>
+            <select>
+                <option>Select One</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label >Comment</label>
+            <textarea class="form-control"></textarea>
+        </div>
+        <input type="submit" value="Submit"/>
+    </form>
+</div>
