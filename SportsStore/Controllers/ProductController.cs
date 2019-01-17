@@ -11,7 +11,7 @@ namespace SportsStore.Controllers
     public class ProductController : Controller
     {
         private IProductRepository repository;
-        public int PageSize = 4;
+        public int PageSize = 8;
 
         private ProductService product;
         private ReviewService review;//new
@@ -60,16 +60,50 @@ namespace SportsStore.Controllers
             return View(model);
         }
 
-        [HttpPost]
-        public IActionResult AddReview(Review model)
+        public IActionResult WriteReviews()
         {
-            
-            string url = this.Request.Path;
-            if (ModelState.IsValid)
+           if(AccountController.uname == null)
             {
-                review.Add(model);
+               // return Redirect("http://localhost:53406/Account/Login/");
+               return RedirectToAction("Login", "Account");
             }
-            return Redirect("http://localhost:53406/Product/Detail/1");
+           else
+            {
+                return View();
+            }
+            
         }
+
+        [HttpPost]
+        public IActionResult AddReview(Review rev)
+        {
+            // ProductReviewViewModel pr = model;
+            //Console.WriteLine("Model " + model.product);
+            //var listingResult = pr.Reviews.Select(result => new Review { comment = result.comment, rating = result.rating, product = result.product, user = result.user} );
+            var p = product.GetById(rev.Id);
+            var review = new Review { comment = rev.comment, product = p, rating = rev.rating };
+            this.review.Add(review);
+            //Console.WriteLine("rating " + rating + "comment "+comment);
+           // return Redirect("http://localhost:53406/Product/Detail/"+rev.Id);
+            return RedirectToAction("Detail", "Product", new { id = rev.Id });
+        }
+        public IActionResult Search(string search = null)
+        {
+            if (!string.IsNullOrEmpty(search))
+            {
+                var foundproducts = repository.SearchProducts(search);
+                var productListViewModel = new ProductsListViewModel
+                {
+                    Products = foundproducts
+                };
+
+                return View(productListViewModel);
+            }
+
+            return View();
+
+        }
+
+            
     }
 }

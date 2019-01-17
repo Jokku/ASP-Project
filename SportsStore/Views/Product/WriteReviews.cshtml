@@ -1,0 +1,25 @@
+﻿@model SportsStore.Models.Review
+@using System
+<h5>Write your Review</h5>
+<form asp-controller="Product" asp-action="AddReview" method="post">
+    <h4>Add your Review</h4>
+    <hr />
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label>Rating</label>
+        <select asp-for="rating">
+            <option>Select One</option>
+            <option asp-for="rating" value="1">1</option>
+            <option asp-for="rating" value="2">2</option>
+            <option asp-for="rating" value="3">3</option>
+            <option asp-for="rating" value="4">4</option>
+            <option asp-for="rating" value="5">5</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Comment</label>
+        <textarea asp-for="comment" class="form-control"></textarea>
+    </div>
+    <input style="visibility:hidden;" type="text" value='@Context.Request.Query["pid"]' asp-for="Id" />
+    <input type="submit" value="Submit" style="float:left;"/>
+</form>

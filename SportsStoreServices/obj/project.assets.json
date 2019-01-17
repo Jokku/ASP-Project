@@ -14330,11 +14330,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jokku\\Downloads\\pro-asp.net-core-mvc-2-master\\pro-asp.net-core-mvc-2-master\\12 - SportsStore - Security & Deployment\\SportsStore\\SportsStoreServices\\SportsStoreServices.csproj",
+      "projectUniqueName": "C:\\Users\\jokku\\Downloads\\SportsStore_DoneSessionandStyle (2) (1)\\SportsStore_DoneSessionandStyle\\SportsStore\\SportsStoreServices\\SportsStoreServices.csproj",
       "projectName": "SportsStoreServices",
-      "projectPath": "C:\\Users\\jokku\\Downloads\\pro-asp.net-core-mvc-2-master\\pro-asp.net-core-mvc-2-master\\12 - SportsStore - Security & Deployment\\SportsStore\\SportsStoreServices\\SportsStoreServices.csproj",
+      "projectPath": "C:\\Users\\jokku\\Downloads\\SportsStore_DoneSessionandStyle (2) (1)\\SportsStore_DoneSessionandStyle\\SportsStore\\SportsStoreServices\\SportsStoreServices.csproj",
       "packagesPath": "C:\\Users\\jokku\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jokku\\Downloads\\pro-asp.net-core-mvc-2-master\\pro-asp.net-core-mvc-2-master\\12 - SportsStore - Security & Deployment\\SportsStore\\SportsStoreServices\\obj\\",
+      "outputPath": "C:\\Users\\jokku\\Downloads\\SportsStore_DoneSessionandStyle (2) (1)\\SportsStore_DoneSessionandStyle\\SportsStore\\SportsStoreServices\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -14353,11 +14353,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\jokku\\Downloads\\pro-asp.net-core-mvc-2-master\\pro-asp.net-core-mvc-2-master\\12 - SportsStore - Security & Deployment\\SportsStore\\SportsStore.Tests\\SportsStore.Tests.csproj": {
-              "projectPath": "C:\\Users\\jokku\\Downloads\\pro-asp.net-core-mvc-2-master\\pro-asp.net-core-mvc-2-master\\12 - SportsStore - Security & Deployment\\SportsStore\\SportsStore.Tests\\SportsStore.Tests.csproj"
+            "C:\\Users\\jokku\\Downloads\\SportsStore_DoneSessionandStyle (2) (1)\\SportsStore_DoneSessionandStyle\\SportsStore\\SportsStore.Tests\\SportsStore.Tests.csproj": {
+              "projectPath": "C:\\Users\\jokku\\Downloads\\SportsStore_DoneSessionandStyle (2) (1)\\SportsStore_DoneSessionandStyle\\SportsStore\\SportsStore.Tests\\SportsStore.Tests.csproj"
             },
-            "C:\\Users\\jokku\\Downloads\\pro-asp.net-core-mvc-2-master\\pro-asp.net-core-mvc-2-master\\12 - SportsStore - Security & Deployment\\SportsStore\\SportsStore\\SportsStore.csproj": {
-              "projectPath": "C:\\Users\\jokku\\Downloads\\pro-asp.net-core-mvc-2-master\\pro-asp.net-core-mvc-2-master\\12 - SportsStore - Security & Deployment\\SportsStore\\SportsStore\\SportsStore.csproj"
+            "C:\\Users\\jokku\\Downloads\\SportsStore_DoneSessionandStyle (2) (1)\\SportsStore_DoneSessionandStyle\\SportsStore\\SportsStore\\SportsStore.csproj": {
+              "projectPath": "C:\\Users\\jokku\\Downloads\\SportsStore_DoneSessionandStyle (2) (1)\\SportsStore_DoneSessionandStyle\\SportsStore\\SportsStore\\SportsStore.csproj"
             }
           }
         }

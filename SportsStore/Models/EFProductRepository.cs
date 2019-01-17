@@ -37,5 +37,13 @@ namespace SportsStore.Models {
             }
             return dbEntry;
         }
+
+        public List<Product> SearchProducts(string search)
+        {
+
+            return context.Products.
+                                   Where(p => p.Name.Contains(search))
+                                    .ToList();
+        }
     }
 }

@@ -13,7 +13,23 @@ namespace SportsStore.Controllers {
             repository = repo;
         }
 
-        public ViewResult Index() => View(repository.Products);
+        public IActionResult Index()
+        {
+            if (AccountController.uname == null)
+            {
+                // return Redirect("http://localhost:53406/Account/Login/");
+                return RedirectToAction("Login", "Account");
+            }
+            else
+            {
+                if (AccountController.uname == "admin@gmail.com")
+                {
+                    return View(repository.Products);
+                }
+                return RedirectToAction("List", "Product");
+            }
+            
+        }
 
         public ViewResult Edit(int productId) =>
             View(repository.Products

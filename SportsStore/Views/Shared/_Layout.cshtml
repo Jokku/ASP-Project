@@ -13,23 +13,27 @@
     <div class="navbar navbar-inverse bg-inverse" role="navigation">
         <div class="row">
             <a class="col navbar-brand" href="#">SPORTS STORE</a>
-            <div class="col-4 text-right">
-                @await Component.InvokeAsync("CartSummary")
+            <div class="col-3 text-right">
+                <form asp-action="Search" asp-controller="Product" method="POST">
+
+                    <div class="row input-group">
+                        <input type="text" name="search" id="search" class="form-control" />
+
+                        <input type="submit" value="Search" class="btn btn-primary" />
+                    </div>
+                </form>
+
             </div>
-        </div>
-    </div>
-    <div class="row m-1 p-1">
-        <div id="categories" class="col-3">
+            @await Component.InvokeAsync("CartSummary")
             @await Html.PartialAsync("_LoginPartial")
         </div>
-        <div class="col-9">
-
-        </div>
     </div>
+  
 
     <div class="row m-1 p-1">
         <div id="categories" class="col-3">
             @await Component.InvokeAsync("NavigationMenu")
+
         </div>
         <div class="col-9">
             @RenderBody()

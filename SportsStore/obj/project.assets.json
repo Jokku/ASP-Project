@@ -13254,11 +13254,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jokku\\Downloads\\pro-asp.net-core-mvc-2-master\\pro-asp.net-core-mvc-2-master\\12 - SportsStore - Security & Deployment\\SportsStore\\SportsStore\\SportsStore.csproj",
+      "projectUniqueName": "C:\\Users\\jokku\\Downloads\\SportsStore_DoneSessionandStyle (2) (1)\\SportsStore_DoneSessionandStyle\\SportsStore\\SportsStore\\SportsStore.csproj",
       "projectName": "SportsStore",
-      "projectPath": "C:\\Users\\jokku\\Downloads\\pro-asp.net-core-mvc-2-master\\pro-asp.net-core-mvc-2-master\\12 - SportsStore - Security & Deployment\\SportsStore\\SportsStore\\SportsStore.csproj",
+      "projectPath": "C:\\Users\\jokku\\Downloads\\SportsStore_DoneSessionandStyle (2) (1)\\SportsStore_DoneSessionandStyle\\SportsStore\\SportsStore\\SportsStore.csproj",
       "packagesPath": "C:\\Users\\jokku\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jokku\\Downloads\\pro-asp.net-core-mvc-2-master\\pro-asp.net-core-mvc-2-master\\12 - SportsStore - Security & Deployment\\SportsStore\\SportsStore\\obj\\",
+      "outputPath": "C:\\Users\\jokku\\Downloads\\SportsStore_DoneSessionandStyle (2) (1)\\SportsStore_DoneSessionandStyle\\SportsStore\\SportsStore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

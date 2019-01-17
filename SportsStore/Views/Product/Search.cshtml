@@ -1,12 +1,12 @@
 ﻿@model ProductsListViewModel
 @using SportsStore.Controllers
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Bootstrap Example</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+
+
+@{
+    ViewData["Title"] = "Search";
+}
+
+
 <body>
     @if (AccountController.uname == null)
     {
@@ -18,15 +18,15 @@
             </div>
         </div>
     }
-    @foreach (var p in Model.Products)
+    @foreach (var foundProduct in Model.Products)
     {
-        @Html.Partial("ProductSummary", p)
+        @Html.Partial("ProductSummary", foundProduct)
     }
-    <div page-model="@Model.PagingInfo" page-action="List" page-classes-enabled="true"
+    <div page-action="List" page-classes-enabled="true"
          page-class="btn" page-class-normal="btn-secondary"
          page-class-selected="btn-primary" page-url-category="@Model.CurrentCategory"
          class="btn-group pull-right m-1">
     </div>
 
 </body>
-</html>
+

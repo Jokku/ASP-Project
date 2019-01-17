@@ -1,5 +1,5 @@
 ﻿@model SportsStore.Models.ViewModels.ProductReviewViewModel
-
+@using SportsStore.Controllers
 <div id="pdetails">
     <h3>Product Details</h3>
     <div id="reviewTable">
@@ -41,7 +41,6 @@
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>User</th>
                     <th>Rating</th>
                     <th>Comment</th>
                 </tr>
@@ -50,9 +49,6 @@
                 @foreach (var review in Model.Reviews)
                 {
                     <tr>
-                        <td>
-                            @review.user
-                        </td>
                         <td>
                             @review.rating
                         </td>
@@ -64,27 +60,24 @@
             </tbody>
         </table>
     </div>
+    @*Html.Partial("WriteReviews")*@
+    @*await Html.PartialAsync("WriteReviews")*@
+    <!--<a class="btn btn-primary" asp-controller="Product" asp-action="WriteReviews">Write Your Review</a>-->
+    @if (AccountController.uname != null)
+    {
+        <a class="btn btn-primary" href='@Url.Action("WriteReviews", "Product")?pid=@Model.Product.ProductID'>Write Your Review</a>
+    }
+    else
+    {
+        @if (AccountController.uname == null)
+        {
 
-    <h5>Write your Review</h5>
-    <form asp-controller="Product" asp-action="AddReview" method="post">
-        <h4>Add your Review</h4>
-        <hr />
-        <div asp-validation-summary="All" class="text-danger"></div>
-        <div class="form-group">
-            <label>Rating</label>
-            <select>
-                <option>Select One</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label >Comment</label>
-            <textarea class="form-control"></textarea>
-        </div>
-        <input type="submit" value="Submit"/>
-    </form>
+            <div class="card border-danger mb-3" style="max-width: 18rem; padding:10px;">
+                <div class="card-body text-danger">
+                    <h5 class="card-title">You are not Logged In!</h5>
+                    <p class="card-text">Please login to rate our products.</p>
+                </div>
+            </div>
+        }
+    }
 </div>

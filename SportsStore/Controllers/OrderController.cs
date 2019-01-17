@@ -37,6 +37,15 @@ namespace SportsStore.Controllers {
             if (cart.Lines.Count() == 0) {
                 ModelState.AddModelError("", "Sorry, your cart is empty!");
             }
+            for (int i = 0; i < cart.Lines.Count(); i++)
+            {
+                if (cart.Lines.ElementAt(i).Quantity > 1)
+                {
+                    int count = cart.Lines.ElementAt(i).Quantity;
+                    ModelState.AddModelError("", "Sorry, you got " + count + " (Quantity) " + cart.Lines.ElementAt(i).Product.Name + " in your cart");
+                }
+
+            }
             if (ModelState.IsValid) {
                 order.Lines = cart.Lines.ToArray();
                 repository.SaveOrder(order);
