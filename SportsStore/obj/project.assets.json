@@ -13254,11 +13254,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Web Term Project\\SportsStore\\SportsStore\\SportsStore.csproj",
       "projectName": "SportsStore",
       "projectPath": "C:\\Web Term Project\\SportsStore\\SportsStore\\SportsStore.csproj",
       "packagesPath": "C:\\Users\\jokku\\.nuget\\packages\\",
       "outputPath": "C:\\Web Term Project\\SportsStore\\SportsStore\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\jokku\\Downloads\\SportsStore_DoneSessionandStyle (2) (1)\\SportsStore_DoneSessionandStyle\\SportsStore\\SportsStore\\SportsStore.csproj",
+      "projectName": "SportsStore",
+      "projectPath": "C:\\Users\\jokku\\Downloads\\SportsStore_DoneSessionandStyle (2) (1)\\SportsStore_DoneSessionandStyle\\SportsStore\\SportsStore\\SportsStore.csproj",
+      "packagesPath": "C:\\Users\\jokku\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jokku\\Downloads\\SportsStore_DoneSessionandStyle (2) (1)\\SportsStore_DoneSessionandStyle\\SportsStore\\SportsStore\\obj\\",
+>>>>>>> 864cc30ee0c98d7fd9c95705bc6ff3714354e784
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

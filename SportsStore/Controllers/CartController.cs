@@ -15,6 +15,7 @@ namespace SportsStore.Controllers {
         }
 
         public ViewResult Index(string returnUrl) {
+
             return View(new CartIndexViewModel {
                 Cart = cart,
                 ReturnUrl = returnUrl
@@ -22,12 +23,21 @@ namespace SportsStore.Controllers {
         }
 
         public RedirectToActionResult AddToCart(int productId, string returnUrl) {
-            Product product = repository.Products
-                .FirstOrDefault(p => p.ProductID == productId);
-            if (product != null) {
-                cart.AddItem(product, 1);
+            if (AccountController.uname == null)
+            {
+                // return Redirect("http://localhost:53406/Account/Login/");
+                return RedirectToAction("Login", "Account");
             }
-            return RedirectToAction("Index", new { returnUrl });
+            else
+            {
+                Product product = repository.Products
+    .FirstOrDefault(p => p.ProductID == productId);
+                if (product != null)
+                {
+                    cart.AddItem(product, 1);
+                }
+                return RedirectToAction("Index", new { returnUrl });
+            }
         }
 
         public RedirectToActionResult RemoveFromCart(int productId,

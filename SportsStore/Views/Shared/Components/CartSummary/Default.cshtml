@@ -1,6 +1,10 @@
 ﻿@model Cart
 @using SportsStore.Controllers
+<<<<<<< HEAD
 <div class="">
+=======
+<div class="col" style="display:inline;float:right;">
+>>>>>>> 864cc30ee0c98d7fd9c95705bc6ff3714354e784
     @if (Model.Lines.Count() > 0)
     {
         <small class="navbar-text">
@@ -11,7 +15,11 @@
     }
     @if (AccountController.uname != null)
     {
+<<<<<<< HEAD
         <a class="btn btn-sm btn-secondary navbar-btn"
+=======
+        <a style="float:right;" class="btn btn-sm btn-secondary navbar-btn"
+>>>>>>> 864cc30ee0c98d7fd9c95705bc6ff3714354e784
            asp-controller="Cart" asp-action="Index"
            asp-route-returnurl="@ViewContext.HttpContext.Request.PathAndQuery()">
             <i class="fa fa-shopping-cart"></i>

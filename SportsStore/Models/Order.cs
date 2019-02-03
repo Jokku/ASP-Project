@@ -33,6 +33,16 @@ namespace SportsStore.Models {
         [Required(ErrorMessage = "Please enter a country name")]
         public string Country { get; set; }
 
+        //[MaxLength(16)]
+        
+        //[MaxLength(16)]
+       // [MinLength(16)]
+       [MinLength(16)]
+       [Required]
+        //[StringLength (16,ErrorMessage = "Please Enter a valid Credit/Debit Card")]
+        //[Required(ErrorMessage = "Please Enter a valid Credit/Debit Card")]
+        public string CardDetails { get; set; }
+
         public bool GiftWrap { get; set; }
     }
 }

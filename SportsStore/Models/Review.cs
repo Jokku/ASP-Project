@@ -18,7 +18,5 @@ namespace SportsStore.Models
         //public AccountViewModels.LoginViewModel User { get; set; }
         [Required]
         public Product product { get; set; }
-        [Required]
-        public ApplicationUser user { get; set; }
     }
 }

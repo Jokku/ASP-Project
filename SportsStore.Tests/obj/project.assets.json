@@ -14319,11 +14319,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Web Term Project\\SportsStore\\SportsStore.Tests\\SportsStore.Tests.csproj",
       "projectName": "SportsStore.Tests",
       "projectPath": "C:\\Web Term Project\\SportsStore\\SportsStore.Tests\\SportsStore.Tests.csproj",
       "packagesPath": "C:\\Users\\jokku\\.nuget\\packages\\",
       "outputPath": "C:\\Web Term Project\\SportsStore\\SportsStore.Tests\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\jokku\\Downloads\\SportsStore_DoneSessionandStyle (2) (1)\\SportsStore_DoneSessionandStyle\\SportsStore\\SportsStore.Tests\\SportsStore.Tests.csproj",
+      "projectName": "SportsStore.Tests",
+      "projectPath": "C:\\Users\\jokku\\Downloads\\SportsStore_DoneSessionandStyle (2) (1)\\SportsStore_DoneSessionandStyle\\SportsStore\\SportsStore.Tests\\SportsStore.Tests.csproj",
+      "packagesPath": "C:\\Users\\jokku\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jokku\\Downloads\\SportsStore_DoneSessionandStyle (2) (1)\\SportsStore_DoneSessionandStyle\\SportsStore\\SportsStore.Tests\\obj\\",
+>>>>>>> 864cc30ee0c98d7fd9c95705bc6ff3714354e784
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -14342,8 +14350,13 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Web Term Project\\SportsStore\\SportsStore\\SportsStore.csproj": {
               "projectPath": "C:\\Web Term Project\\SportsStore\\SportsStore\\SportsStore.csproj"
+=======
+            "C:\\Users\\jokku\\Downloads\\SportsStore_DoneSessionandStyle (2) (1)\\SportsStore_DoneSessionandStyle\\SportsStore\\SportsStore\\SportsStore.csproj": {
+              "projectPath": "C:\\Users\\jokku\\Downloads\\SportsStore_DoneSessionandStyle (2) (1)\\SportsStore_DoneSessionandStyle\\SportsStore\\SportsStore\\SportsStore.csproj"
+>>>>>>> 864cc30ee0c98d7fd9c95705bc6ff3714354e784
             }
           }
         }

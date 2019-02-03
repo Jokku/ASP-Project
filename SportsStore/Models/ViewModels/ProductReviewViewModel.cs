@@ -10,6 +10,12 @@ namespace SportsStore.Models.ViewModels
        
         public Product Product { get; set; }
         public IEnumerable<Review> Reviews { get; set; }
+
+        public ProductReviewViewModel()
+        {
+
+        }
+
         public ProductReviewViewModel(Product p, IEnumerable<Review> r)
         {
             Product = p;
