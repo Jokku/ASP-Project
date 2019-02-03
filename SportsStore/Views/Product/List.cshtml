@@ -1,11 +1,32 @@
 ﻿@model ProductsListViewModel
+@using SportsStore.Controllers
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    @if (AccountController.uname == null)
+    {
 
-@foreach (var p in Model.Products) {
-    @Html.Partial("ProductSummary", p)
-}
+        <div class="card border-danger mb-3" style="max-width: 18rem; padding:10px;">
+            <div class="card-body text-danger">
+                <h5 class="card-title">You are not Logged In!</h5>
+                <p class="card-text">Please login to purchase products or add to cart.</p>
+            </div>
+        </div>
+    }
+    @foreach (var p in Model.Products)
+    {
+        @Html.Partial("ProductSummary", p)
+    }
+    <div page-model="@Model.PagingInfo" page-action="List" page-classes-enabled="true"
+         page-class="btn" page-class-normal="btn-secondary"
+         page-class-selected="btn-primary" page-url-category="@Model.CurrentCategory"
+         class="btn-group pull-right m-1">
+    </div>
 
-<div page-model="@Model.PagingInfo" page-action="List" page-classes-enabled="true"
-     page-class="btn" page-class-normal="btn-secondary"
-     page-class-selected="btn-primary" page-url-category="@Model.CurrentCategory"
-     class="btn-group pull-right m-1">
-</div>
+</body>
+</html>

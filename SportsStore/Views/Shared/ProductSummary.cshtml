@@ -1,5 +1,7 @@
 ﻿@model Product
+@using SportsStore.Controllers
 
+<a asp-controller="Product" asp-action="Detail" asp-route-returnurl="" asp-route-id="@Model.ProductID">
 <div class="card card-outline-primary m-1 p-1">
     <div class="bg-faded p-1">
         <h4>
@@ -16,10 +18,15 @@
                value="@ViewContext.HttpContext.Request.PathAndQuery()" />
         <span class="card-text p-1">
             @Model.Description
-            <button type="submit"
-                    class="btn btn-success btn-sm pull-right" style="float:right">
-                Add To Cart
-            </button>
+            @if (AccountController.uname != null)
+            {
+                <button type="submit"
+                        class="btn btn-success btn-sm pull-right" style="float:right">
+                    Add To Cart
+                </button>
+            }
         </span>
     </form>
 </div>
+</a>
+
